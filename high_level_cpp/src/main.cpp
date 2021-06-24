@@ -9,7 +9,37 @@
 #include <iostream>
 using namespace std;
 
+class cars
+{
+	float net_price;
+	float rto_charges;
+	float road_tax;
+
+public:
+
+	cars(float nnet_price = 100000, float rrto_charges=10000, float rroad_tax=450000)
+	{
+		net_price = nnet_price;
+		rto_charges=rrto_charges;
+		road_tax = rroad_tax;
+	}
+
+
+	void price()
+	{
+		cout<<"car price = "<<net_price+rto_charges+road_tax;
+	}
+
+	~cars()
+	{
+		cout<<endl;
+	}
+
+};
+
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cars xylo;
+	xylo.price();
+
 	return 0;
 }
